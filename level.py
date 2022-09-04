@@ -53,7 +53,8 @@ class Level:
                 elif player.direction.x > 0:
                     player.rect.right = sprite.rect.left
 
-    def
+    def vertical_movement_collision(self):
+        player = self.player.sprite
 
     def run(self):
         self.tiles.update(self.world_shift)
