@@ -4,8 +4,10 @@ from support import import_folder
 class Player(pygame.sprite.Sprite):
     def __init__(self,pos):
         super().__init__()
-        self.image =pygame.Surface((32,64))
-        self.image.fill('red')
+        self.import_character_assets()
+        self.frame_index = 0
+        self.animation_speed = 0.15
+        self.image = self.animations['idle'][self.frame_index]
         self.rect = self.image.get_rect(topleft = pos)
 
         #player movement
